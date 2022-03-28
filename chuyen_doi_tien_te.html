@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen doio tien te</title>
+</head>
+    <p>Amount<br><input id="so_tien" type="text" name="soTien"></p>
+    <p>From currency</p>
+    <select id="fromCurrency">
+        <option value="23000">VietNam</option>
+        <option value="1">USD</option>
+    </select>
+    <p>To currency</p>
+    <select id="toCurrency">
+        <option value="1">USD</option>
+        <option value="23000">VietNam</option>
+    </select>
+    <button id="chuyen_doi">Convert</button>
+    <p id="hien_thi"></p>
+    <script>
+        let tinh_tien = document.getElementById("chuyen_doi");
+        tinh_tien.onclick = function () {
+            let so_tien = +document.getElementById("so_tien").value;
+            let fromCurrency = document.getElementById("fromCurrency").value;
+            let toCurrency = document.getElementById("toCurrency").value;
+            let Result = so_tien * toCurrency / fromCurrency;
+            document.getElementById('hien_thi').innerHTML = "Result: " + Result;
+        }
+    </script>
+
+<body>
+</body>
+</html>
